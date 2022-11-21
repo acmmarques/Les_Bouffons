@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= render 'components/navbar' %>
     <%= yield %>
     <%= render 'shared/button' %>
     <%= render 'shared/footer' %>
