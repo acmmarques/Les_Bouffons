@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
-.banner {
+.banner-titulo {
   h1 {
     font-family: 'Nerko One', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: white;
   }
 }
 
-.banner {
-  background-color: #E67E22; ;
+.banner-titulo {
+  background-color: #E67E22;
 }
