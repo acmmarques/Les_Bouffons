@@ -1,7 +1,7 @@
 .btn-details {
   color: white;
   font-family: 'Nerko One', cursive;
-  font-size: 20px;
+  font-size: 25px;
   width: 250px;
   padding: 30px;
   border-radius: 8px;
@@ -10,25 +10,25 @@
 }
 
 .btn-details:hover {
-  background: $black;
-  color: $white;
+  background: $purple;
+  color: $black;
 }
 
 .btn-book {
   color: white;
   font-family: 'Nerko One', cursive;
   margin-right: 20px;
-  font-size: 20px;
+  font-size: 25px;
   width: 250px;
   padding: 30px;
   border-radius: 8px;
-  background: $red;
+  background: $pink;
   transition: background 0.3s ease;
 }
 
 .btn-book:hover {
-  background: $black;
-  color: $white;
+  background: $pink;
+  color: $black;
 }
 
 .btn-start {
