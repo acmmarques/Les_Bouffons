@@ -8,25 +8,26 @@
     class="avatar-xl avatar_profile"
     src="https://i.discogs.com/iXyC_z0GEuMuabm18wuX_HFVJeYojEEDNCnMUMvuuWM/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc2OTQ3/OTMtMTU4NDEwOTQ2/MC04OTM1LmpwZWc.jpeg">
     <div class="container" id="content_profile">
-      <div class="row">
-        <div class="col-12 col-lg-8">
+      <div class="row justify-content-between" id="info-booking-container">
+        <div class="col-12 col-lg-6 card-category-info">
 
 
-          <div>
+          <div id="name-location-container">
             <h1><%= @clown.name %></h1>
             <p>location of clown (to-do)</p>
           </div>
           <div>
             <p><%= @clown.details %></p>
           </div>
-          <div>
+          <div >
             <% @clown.features.split.each do |feature|  %>
-            <button><%= feature.capitalize %></button>
+            <button type="button" class="btn btn-info" id="features_button"><%= feature.capitalize %></button>
             <% end %>
           </div>
         </div>
-        <div class="col-12 col-lg-4">
-          <div>
+
+        <div class="col-12 col-lg-4 card-category-booking">
+          <div class="booking-container">
             <h5 class="mb-3">Book this clown!</h5>
             <h6 class="mb-3"><%= @clown.price %>€ per day </h6>
             <div class="container my-3" style="max-read 500px;">
@@ -43,22 +44,29 @@
                       </label>
                       <input class="form-control numeric integer optional" type="number" step="1" name="booking[duration]" id="booking_duration">
                     </div>
-                    <input type="submit" name="commit" value="Request Booking" class="btn btn-dark" data-disable-with="Request Booking">
+                    <input type="submit" name="commit" value="Book this clown" class="btn btn-info" data-disable-with="Request Booking">
             </div>
-
-
           </div>
-          <%# <div>
-            <div class="flex-align mt-4">
-              <h6 class="no-mb">Share</h6>
-              <div class="flex"> fb twitter ig</div>
-            <div class="flex"></div>
-            </div>
-          </div> %>
+
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="cards">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.trustinnews.pt/uploads/sites/5/2022/02/220217_batatinha-1600x1015.jpg)">
+          Party 1
+        </div>
 
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.sabado.pt/images/2011-01/img_640x426$2011_01_12_20_58_11_87072.jpg)">
+          Party 2
+        </div>
+
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://dioguinho.com/wp-content/uploads/2020/11/Palhaco-Batatinha-Companhia-Batatoon-TVI.jpg)">
+          Party 3
+        </div>
+      </div>
+
+    </div>
 
 
 
