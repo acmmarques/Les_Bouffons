@@ -1,0 +1,36 @@
+.banner_profile {
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fideas-for-kids-parties.com%2F804%2Fclown-or-magician%2F&psig=AOvVaw0GdcsxBCjoj6ZWg91qtbbk&ust=1669205592029000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMi17sThwfsCFQAAAAAdAAAAABAY);
+}
+.banner_profile {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  font-family: Montserrat;
+  background-size: 90%;
+}
+
+.avatar_profile {
+  position: absolute;
+  top: 320px;
+  left: 80px;
+}
+
+.avatar-xl {
+  width: 150px;
+  border-radius: 50%;
+}
+
+#content_profile {
+  margin-top: 90px;
+  margin-bottom: 45px;
+}
+
+button {
+  background-color: blue;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
