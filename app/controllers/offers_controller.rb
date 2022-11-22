@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  before_action :set_clown, only: %i[ show ]%i
+  before_action :set_clown, only: %i[ show ]
 
   def show
   end
@@ -7,6 +7,6 @@ class OffersController < ApplicationController
   private
 
   def set_clown
-    @clown = Clown.find(params[:id])
+    @clown = Offer.find(params[:id])
   end
 end

@@ -1,0 +1,70 @@
+<div class="page" style="min-height:75vh;">
+  <div class="banner_profile" style="background-image"></div>
+
+
+  <div class="overall-container" style="max-width: 1350px; margin: 0 auto;">
+
+    <img height="150" width="150"
+    class="avatar-xl avatar_profile"
+    src="https://i.discogs.com/iXyC_z0GEuMuabm18wuX_HFVJeYojEEDNCnMUMvuuWM/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc2OTQ3/OTMtMTU4NDEwOTQ2/MC04OTM1LmpwZWc.jpeg">
+    <div class="container" id="content_profile">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+
+
+          <div>
+            <h1><%= @clown.name %></h1>
+            <p>location of clown (to-do)</p>
+          </div>
+          <div>
+            <p><%= @clown.details %></p>
+          </div>
+          <div>
+            <% @clown.features.split.each do |feature|  %>
+            <button><%= feature.capitalize %></button>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div>
+            <h5 class="mb-3">Book this clown!</h5>
+            <h6 class="mb-3"><%= @clown.price %>€ per day </h6>
+            <div class="container my-3" style="max-read 500px;">
+                  <form class="simple_form new_booking" id="new_booking" novalidate="novalidate" action="#" accept-charset="UTF-8" method="post"></form>
+                    <input type="hidden" name="authenticity_token" value="aceP967tPQ/mF6N1d5PZFTbLZcUI/rbfKC3sxL+mUnRhcUrD+DRaTwDWDntI6K85GrMeg7YolG852hNSCYZfZQ==">
+                    <div class="form-group date optional booking_day">
+                      <label class="date optional" for="booking_day">Day</label>
+                      <div class="d-flex flex-row justify-content-between align-items-center">
+                        <input class="form-control mx-1 date optional" type="date" name="booking[day]" id="booking_day">
+                      </div>
+                    </div>
+                    <div class="form-group integer optional booking_duration">
+                      <label class="integer optional" for="booking_duration">How many days?
+                      </label>
+                      <input class="form-control numeric integer optional" type="number" step="1" name="booking[duration]" id="booking_duration">
+                    </div>
+                    <input type="submit" name="commit" value="Request Booking" class="btn btn-dark" data-disable-with="Request Booking">
+            </div>
+
+
+          </div>
+          <%# <div>
+            <div class="flex-align mt-4">
+              <h6 class="no-mb">Share</h6>
+              <div class="flex"> fb twitter ig</div>
+            <div class="flex"></div>
+            </div>
+          </div> %>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+</div>
