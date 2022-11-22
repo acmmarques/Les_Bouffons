@@ -1,6 +1,9 @@
 .btn-details {
   color: white;
-  padding: 8px 24px;
+  font-family: 'Nerko One', cursive;
+  font-size: 20px;
+  width: 250px;
+  padding: 30px;
   border-radius: 8px;
   background: $purple;
   transition: background 0.3s ease;
@@ -13,7 +16,11 @@
 
 .btn-book {
   color: white;
-  padding: 8px 24px;
+  font-family: 'Nerko One', cursive;
+  margin-right: 20px;
+  font-size: 20px;
+  width: 250px;
+  padding: 30px;
   border-radius: 8px;
   background: $red;
   transition: background 0.3s ease;
