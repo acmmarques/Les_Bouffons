@@ -1,14 +1,15 @@
 .btn-details {
-  color: white;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 8px;
-  background: #060606;
-  transition: background 0.3s ease;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .btn-details:hover {
-  background: #8A2BE2;
-  color: white;
+  opacity: 1;
 }
 
 .btn-book {
@@ -20,7 +21,7 @@
 }
 
 .btn-book:hover {
-  background: #8A2BE2;
+  background: #8d8c90;
   color: white;
 }
 
