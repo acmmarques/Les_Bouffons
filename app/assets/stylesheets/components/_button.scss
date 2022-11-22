@@ -1,40 +1,39 @@
 .btn-details {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
+  color: white;
   padding: 8px 24px;
   border-radius: 8px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  background: $purple;
+  transition: background 0.3s ease;
 }
 
 .btn-details:hover {
-  opacity: 1;
+  background: $black;
+  color: $white;
 }
 
 .btn-book {
   color: white;
   padding: 8px 24px;
   border-radius: 8px;
-  background: #060606;
+  background: $red;
   transition: background 0.3s ease;
 }
 
 .btn-book:hover {
-  background: #8d8c90;
-  color: white;
+  background: $black;
+  color: $white;
 }
 
 .btn-start {
-  color: white;
+  color: $white;
   padding: 8px 24px;
   border-radius: 8px;
   font-weight: bold;
-  background: #8d8c90;
+  background: $light-gray;
   transition: background 0.3s ease;
 }
 
 .btn-start:hover {
-  background: #060606;
-  color: white;
+  background: $black;
+  color: $white;
 }
