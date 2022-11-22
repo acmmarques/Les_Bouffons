@@ -1,0 +1,44 @@
+.card-main{
+  font-family: 'Nerko One', cursive;
+  border-radius: 10%;
+  min-height: 260px;
+  text-align: left;
+  // background-color: $yellow;
+}
+
+.card-price{
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  font-size: 30px;
+  color: $pink;
+}
+
+.card-link {
+  background-color: $pink;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100px;
+  position: absolute;
+  bottom: 15px;
+  right: 120px;
+  text-align: center;
+}
+
+.card-link {
+  color: $white;
+  font-size: 25px;
+  font-weight: bolder;
+  text-decoration: none;
+  font-family: $title-font;
+
+  &:hover {
+    background-color: $white;
+    color: $pink;
+  }
+}
+
+.shadowed-text {
+  color: white;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
