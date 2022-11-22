@@ -1,5 +1,6 @@
 .card-main{
   font-family: 'Nerko One', cursive;
+  box-shadow: 5px 10px 18px #888888;
   border-radius: 10%;
   min-height: 260px;
   text-align: left;
@@ -9,8 +10,8 @@
 .card-price{
   position: absolute;
   bottom: 5px;
-  right: 20px;
-  font-size: 30px;
+  right: 30px;
+  font-size: 35px;
   color: $pink;
 }
 
