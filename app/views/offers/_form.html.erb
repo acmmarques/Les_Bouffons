@@ -1,0 +1,54 @@
+<%= simple_form_for(@clown) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class=overall-container>
+    <div class="form-container">
+      <div class="form-inputs">
+        <%= f.input :name, class:"form-control form-control-lg", type:"text", placeholder:"Clown's name" %>
+        <%= f.input :details, class:"form-control", id:"exampleFormControlTextarea1", placeholder:"Tell us something about your clown, you clown" %>
+        <%= f.label :feature %>
+        <%= f.select :features, collection: Offer::FEATURES %>
+        <%= f.label :feature %>
+        <%= f.select :features, collection: Offer::FEATURES %>
+        <%= f.label :feature %>
+        <%= f.select :features, collection: Offer::FEATURES %>
+        <%= f.input :price, class:"form-control", type:"number", placeholder:"Euros per day" %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, class:"btn btn-warning button-create" %>
+      </div>
+    </div>
+
+    <div class="picture-form-container">
+      Profile Pic
+      <div class="upload-container">
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="filename">
+          <input type="submit">
+        </form>
+      </div>
+      Party 1
+            <div class="upload-container">
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="filename">
+          <input type="submit">
+        </form>
+      </div>
+      Party 2
+            <div class="upload-container">
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="filename">
+          <input type="submit">
+        </form>
+      </div>
+      Party 3
+            <div class="upload-container">
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="filename">
+          <input type="submit">
+        </form>
+      </div>
+    </div>
+  </div>
+<% end %>

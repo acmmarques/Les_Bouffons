@@ -57,6 +57,7 @@ i = 0
     clown.photos.attach(io: file, filename: image, content_type: "image/png")
   end
 
+
   clown.user = user
   clown.save
   puts "Clown #{clown.name} - #{clown.save}"
