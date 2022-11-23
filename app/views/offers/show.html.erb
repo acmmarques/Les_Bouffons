@@ -1,5 +1,5 @@
 <div class="page" style="min-height:75vh;">
-  <div class="banner_profile" style="background-image"></div>
+  <div class="banner_profile"></div>
 
 
   <div class="overall-container" style="max-width: 1350px; margin: 0 auto;">
@@ -9,8 +9,8 @@
         <div class="col-12 col-lg-6 card-category-info">
 
 
-          <div id="name-location-container">
-            <h1><%= @clown.name %></h1>
+          <div class="name-location-container">
+            <h1 style="font-family: Nerko One, cursive"><%= @clown.name %></h1>
             <p>location of clown (to-do)</p>
           </div>
           <div>
@@ -18,7 +18,7 @@
           </div>
           <div >
             <% @clown.features.split.each do |feature|  %>
-            <button type="button" class="btn btn-info" id="features_button"><%= feature.capitalize %></button>
+            <button type="button" class="btn btn-info nobutton" id="features_button"><%= feature.capitalize %></button>
             <% end %>
           </div>
         </div>
