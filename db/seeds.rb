@@ -15,15 +15,16 @@ user = User.create(name: "seed user", email: "sample@gmail.com", password: "1234
 
 puts "Creating sample Clowns"
 
-tricks = ["juggle", "handstand", "balloons", "face paint", "singing", "dad jokes", "card tricks", "magic tricks", "instrument", "dance", "acrobatics", "annoy"]
+tricks = ["juggle", "handstand", "balloons", "face-paint", "singing", "dad-jokes", "card-tricks", "magic-tricks", "instrument", "dance", "acrobatics", "annoy"]
 
 10.times do
   clown = Offer.new(
     name: Faker::TvShows::SouthPark.character,
-    features: tricks.sample + ", " + tricks.sample + ", " + tricks.sample,
+    features: tricks.sample + " " + tricks.sample + " " + tricks.sample,
     details: Faker::Quotes::Shakespeare.romeo_and_juliet_quote,
     price: rand(50..150)
   )
+
 
   clown.user = user
   clown.save
