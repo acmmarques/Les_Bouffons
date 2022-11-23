@@ -1,6 +1,11 @@
 <div class="banner-titulo">
-  <h1 class="text-shadow-banner text-center">Welcome to Les Bouffons</h1>
-     <%= image_tag "clown_image.png"%>
-     <%= link_to "Book your clown", offers_path, class: "btn btn-book" %>
-     <a class="btn btn-details" href="#">More details</a>
+  <div class="banner-text">
+
+    <h1 class="text-shadow-banner text-center">Welcome to Les Bouffons</h1>
+    <%= image_tag "clown_image.png", width: 300, height: 400 %>
+    <div class="banner-buttons">
+      <%= link_to "Book your clown", offers_path, class: "btn btn-book" %>
+      <a class="btn btn-details" href="#">More details</a>
+    </div>
+  </div>
 </div>
