@@ -1,12 +1,11 @@
-.banner_profile {
-  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
-}
+
 .banner_profile {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  font-family: Montserrat;
+  font-family: $title-font;
   background-size: 90%;
+  background: asset-url('Colorful-Circles-on-White-Backgrounds.jpg');
 }
 
 .avatar_profile {
@@ -17,6 +16,7 @@
 
 .avatar-xl {
   width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
@@ -27,21 +27,21 @@
 
 #features_button {
   border-radius: 100px;
-
+  text-decoration: none;
 }
 
 .form-group {
   margin-bottom: 1rem;
 }
 
-#name-location-container {
+.name-location-container {
+  font-family: $title-font;
   margin-top: 10px;
 }
 
 #info-booking-container {
   padding: 1rem;
 }
-
 
 .card-category-info {
   background-color: white;
@@ -61,11 +61,30 @@
   padding: 1rem;
 }
 
-
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.cards {
+  margin: 0px 0px 50px 0;
 }
 
 // Smallest device
@@ -74,6 +93,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -101,23 +121,4 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
-
-.card-category {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.cards {
-  margin: 0px 0px 50px 0;
 }

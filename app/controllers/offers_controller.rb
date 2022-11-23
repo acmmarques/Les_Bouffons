@@ -44,6 +44,6 @@ class OffersController < ApplicationController
   end
 
   def clown_params
-    params.require(:offer).permit(:name, :details, :features, :price, :user_id)
+    params.require(:offer).permit(:name, :details, :features, :price, :user_id, photos:[])
   end
 end
