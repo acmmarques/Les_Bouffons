@@ -1,5 +1,5 @@
 .banner_profile {
-  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fideas-for-kids-parties.com%2F804%2Fclown-or-magician%2F&psig=AOvVaw0GdcsxBCjoj6ZWg91qtbbk&ust=1669205592029000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMi17sThwfsCFQAAAAAdAAAAABAY);
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
 }
 .banner_profile {
   background-size: cover;
@@ -21,16 +21,103 @@
 }
 
 #content_profile {
-  margin-top: 90px;
+  margin-top: 120px;
   margin-bottom: 45px;
 }
 
-button {
-  background-color: blue;
+#features_button {
+  border-radius: 100px;
+
 }
 
-.row {
+.form-group {
+  margin-bottom: 1rem;
+}
+
+#name-location-container {
+  margin-top: 10px;
+}
+
+#info-booking-container {
+  padding: 1rem;
+}
+
+
+.card-category-info {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 )
+}
+
+.card-category-booking {
+  pading: 1rem;
+  height: 300px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 )
+}
+
+.booking-container {
+  padding: 1rem;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.cards {
+  margin: 0px 0px 50px 0;
 }
