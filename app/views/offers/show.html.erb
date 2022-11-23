@@ -3,11 +3,8 @@
 
 
   <div class="overall-container" style="max-width: 1350px; margin: 0 auto;">
-
-    <img height="150" width="150"
-    class="avatar-xl avatar_profile"
-    src="https://i.discogs.com/iXyC_z0GEuMuabm18wuX_HFVJeYojEEDNCnMUMvuuWM/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc2OTQ3/OTMtMTU4NDEwOTQ2/MC04OTM1LmpwZWc.jpeg">
-    <div class="container" id="content_profile">
+    <%= cl_image_tag @clown.photos.first.key, :width=>800, :height=>800, :crop=>"crop", :gravity=>"face", class: "avatar-xl avatar_profile"%>
+      <div class="container" id="content_profile">
       <div class="row justify-content-between" id="info-booking-container">
         <div class="col-12 col-lg-6 card-category-info">
 
@@ -53,15 +50,15 @@
     </div>
     <div class="container">
       <div class="cards">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.trustinnews.pt/uploads/sites/5/2022/02/220217_batatinha-1600x1015.jpg)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @clown.photos.second.key, :width=>2000, :height=>2000, :gravity=>"faces", :crop=>"fill"%>)">
           Party 1
         </div>
 
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.sabado.pt/images/2011-01/img_640x426$2011_01_12_20_58_11_87072.jpg)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @clown.photos.third.key, :width=>2000, :height=>2000, :gravity=>"faces", :crop=>"fill"%>)">
           Party 2
         </div>
 
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://dioguinho.com/wp-content/uploads/2020/11/Palhaco-Batatinha-Companhia-Batatoon-TVI.jpg)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @clown.photos.fourth.key, :width=>2000, :height=>2000, :gravity=>"faces", :crop=>"fill"%>)">
           Party 3
         </div>
       </div>
