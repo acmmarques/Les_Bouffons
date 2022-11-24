@@ -1,7 +1,7 @@
 .banner_profile {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 200px 0;
   font-family: $title-font;
   background-size: 90%;
   background: asset-url('Colorful-Circles-on-White-Backgrounds.jpg');
@@ -9,7 +9,7 @@
 
 .avatar_profile {
   position: absolute;
-  top: 290px;
+  top: 385px;
   left: 80px;
 }
 
@@ -31,6 +31,21 @@
 .name-location-container {
   font-family: $title-font;
   margin-top: 10px;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.images-container {
+  display: flex;
+}
+
+.booking-form-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .info-container {
