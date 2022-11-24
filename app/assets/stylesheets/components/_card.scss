@@ -63,5 +63,14 @@
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+.clown-card-link {
+  text-decoration: none;
+  color: $pink;
+
+  .card-title {
+    font-size: 30px;
   }
+}
 
