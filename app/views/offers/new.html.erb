@@ -1,4 +1,4 @@
-<div class = "overall-container">
+<div class = "everything-container">
   <%= simple_form_for @clown, html: {class:"d-contents"} do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -36,7 +36,7 @@
         </div>
 
             <%= f.button :submit, class:"btn btn-primary button-create" %>
-          
+
       </div>
 
 <% end %>
