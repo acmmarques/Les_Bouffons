@@ -26,8 +26,8 @@
 }
 
 .avatar-xl {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .name-location-container {
@@ -55,10 +55,6 @@
   display: flex;
 }
 
-.booking-form-container {
-  display: flex;
-  flex-direction: column;
-}
 
 .info-container {
   background-color: white;
@@ -71,11 +67,12 @@
 
 .booking-form-container {
   padding: 1rem;
-  height: 300px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 5px 10px 18px #888888;
   margin: 120px 0px 45px 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .booking-container {
@@ -110,6 +107,7 @@
 .party-cards {
   margin: 0px 0px 50px 0;
 }
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
