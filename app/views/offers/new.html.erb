@@ -21,21 +21,22 @@
           </div>
           <%= f.input :price, class:"form-control", type:"number", placeholder:"Euros per day" %>
         </div>
+        <%= link_to offers_path, class:"back-to-clown-link" do %>
         <div class="back-to-clowns-container">
           Back to clowns
         </div>
+        <% end %>
       </div>
       <div class="right-container">
-        <div class="upload-profile-container">
-          upload profile container
-        </div>
-        <div class="upload-parties-container">
-          upload parties container
+        <div class="upload-container">
+          <%= f.input :photos, as: :file, input_html: { multiple: true, class: "box-upload" } %>
         </div>
         <div class="preview-container">
           preview container
-          <%= f.button :submit, class:"btn btn-warning button-create" %>
         </div>
+
+            <%= f.button :submit, class:"btn btn-primary button-create" %>
+          
       </div>
 
 <% end %>

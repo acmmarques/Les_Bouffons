@@ -1,14 +1,31 @@
 .overall-container {
-  background-color: #9EDAE1;
+  position: relative;
   display: flex;
   padding: 10px;
+
+  &::before {
+  content: '';
+  position:absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-image:asset-url("Colorful-Circles-on-White-Backgrounds.jpg");
+  background-size: cover;
+  background-position: top center;
+  opacity: 0.75;
+  }
 }
 
+
+
 .left-container {
+  position: relative;
   width: 60%;
 }
 
 .right-container {
+  position: relative;
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -23,7 +40,7 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 10px;
-  height: 400px;
+  height: 360px;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -35,24 +52,27 @@
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
+  width: 25%;
+  text-align: center;
 }
 
-.upload-profile-container {
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  margin: 10px;
-  padding: 10px;
-  height: 15%;
-}
+// .upload-profile-container {
+//   background-color: white;
+//   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+//   border-radius: 10px;
+//   margin: 10px;
+//   padding: 10px;
+//   height: 15%;
+// }
 
-.upload-parties-container {
+.upload-container {
     background-color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
-    height: 15%;
+    height: 25%;
+
 }
 
 .preview-container {
@@ -61,7 +81,7 @@
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
-  height: 70%;
+  height: 75%;
 }
 
 .features-container {
@@ -69,3 +89,13 @@
   justify-content: space-evenly;
   margin: 5px;
 }
+
+.box-upload {
+  margin-top: 10px;
+}
+
+.back-to-clown-link {
+  text-decoration: none;
+  color: black;
+}
+
