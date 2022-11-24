@@ -17,12 +17,12 @@
 
 .btn-book {
   color: white;
-  background: $pink;
+  background: $purple;
   box-shadow: 5px 10px 18px #888888;
   font-family: 'Nerko One', cursive;
   margin-right: 20px;
-  font-size: 25px;
-  width: 250px;
+  font-size: 35px;
+  width: 300px;
   padding: 30px;
   border-radius: 8px;
   transition: background 0.3s ease;
@@ -31,18 +31,4 @@
 .btn-book:hover {
   background: $pink;
   color: $black;
-}
-
-.btn-start {
-  color: $white;
-  padding: 8px 24px;
-  border-radius: 8px;
-  font-weight: bold;
-  background: $light-gray;
-  transition: background 0.3s ease;
-}
-
-.btn-start:hover {
-  background: $black;
-  color: $white;
 }
