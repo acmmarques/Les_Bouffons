@@ -7,7 +7,7 @@
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title shadowed-text"><strong><%= clown.name %></strong></h5>
-          <p class="card-text shadowed-text"><%= clown.details %></p>
+          <p class="card-text shadowed-text"><%= clown.details.gsub(".", ".<br>").html_safe %></p>
           <%= link_to "+ Info", clown, class: "card-link" %>
           <p class="card-price shadowed-text"><strong><%= clown.price %>€</strong></p>
         </div>
