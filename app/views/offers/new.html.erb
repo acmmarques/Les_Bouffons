@@ -1,9 +1,43 @@
-<h1>New clown</h1>
+<div class = "overall-container">
+  <%= simple_form_for @clown, html: {class:"d-contents"} do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <div class="left-container">
+        <div class="form-container">
+          <%= f.input :name, class:"form-control form-control-lg", type:"text", placeholder:"Clown's name" %>
+          <%= f.input :details, class:"form-control", id:"exampleFormControlTextarea1", placeholder:"Tell us something about your clown, you clown" %>
+          Features
+          <div class="features-container">
 
-<%= render "form", offer: @clown %>
+            <div id="first-feature">
+              <%= f.select :features, collection: Offer::FEATURES %>
+            </div>
+            <div id="second-feature">
+              <%= f.select :features, collection: Offer::FEATURES %>
+            </div>
+            <div id="third-feature">
+              <%= f.select :features, collection: Offer::FEATURES %>
+            </div>
+          </div>
+          <%= f.input :price, class:"form-control", type:"number", placeholder:"Euros per day" %>
+        </div>
+        <%= link_to offers_path, class:"back-to-clown-link" do %>
+        <div class="back-to-clowns-container">
+          Back to clowns
+        </div>
+        <% end %>
+      </div>
+      <div class="right-container">
+        <div class="upload-container">
+          <%= f.input :photos, as: :file, input_html: { multiple: true, class: "box-upload" } %>
+        </div>
+        <div class="preview-container">
+          preview container
+        </div>
 
+            <%= f.button :submit, class:"btn btn-primary button-create" %>
+          
+      </div>
 
-<div class="back-to-clowns">
-  <%= link_to "Back to clowns", offers_path %>
-<i class="fa-solid fa-rotate-left"></i>
+<% end %>
 </div>

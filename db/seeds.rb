@@ -36,8 +36,7 @@ clown20 = ["https://res.cloudinary.com/darkysplk/image/upload/v1669201986/Les%20
 clown21 = ["https://res.cloudinary.com/darkysplk/image/upload/v1669201986/Les%20Bouffons/zoe_1_tomoix.jpg", "https://res.cloudinary.com/darkysplk/image/upload/v1669201986/Les%20Bouffons/zoe_2_tkvcox.jpg", "https://res.cloudinary.com/darkysplk/image/upload/v1669201986/Les%20Bouffons/zoe_4_oax3t6.jpg", "https://res.cloudinary.com/darkysplk/image/upload/v1669201986/Les%20Bouffons/zoe_6_yrhfqi.jpg"]
 clown_images = []
 clown_images.push(clown1).push(clown2).push(clown3).push(clown4).push(clown5).push(clown6).push(clown7).push(clown8).push(clown9).push(clown10).push(clown11).push(clown12).push(clown13).push(clown14).push(clown15).push(clown16).push(clown17).push(clown18).push(clown19).push(clown20).push(clown21)
-
-
+names = ["Ana", "Andre", "Carlos", "Catarina", "Dal", "Danilo", "Gabriel", "Gerardo", "Havard", "Ines", "Joe", "Julia", "Loic", "Lorenz", "Manu", "Miguel", "Rory", "Ryan", "Sam", "Vasco", "Zoe"]
 
 puts "Creating sample Clowns"
 
@@ -47,9 +46,9 @@ i = 0
 
 21.times do
   clown = Offer.new(
-    name: Faker::TvShows::SouthPark.character,
+    name: names[i],
     features: tricks.sample + " " + tricks.sample + " " + tricks.sample,
-    details: Faker::Quotes::Shakespeare.romeo_and_juliet_quote,
+    details: "is " + Faker::Emotion.adjective + " speak " + Faker::Nation.language + "." + "  Favorite's citation: " + Faker::ChuckNorris.fact,
     price: rand(50..150)
   )
   for image in clown_images[i]
