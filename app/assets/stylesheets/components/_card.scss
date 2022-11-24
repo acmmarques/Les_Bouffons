@@ -4,6 +4,19 @@
   box-shadow: 5px 10px 18px #888888;
   min-height: 260px;
   text-align: left;
+  margin: 5px;
+}
+
+.card-title{
+  position: absolute;
+  left: 180px;
+}
+
+.card-text{
+  position: absolute;
+  left: 180px;
+  top: 40px;
+  padding-right: 15px;;
 }
 
 .card-price{
@@ -23,9 +36,6 @@
   bottom: 15px;
   right: 120px;
   text-align: center;
-}
-
-.card-link {
   color: $white;
   font-size: 25px;
   font-weight: bolder;
