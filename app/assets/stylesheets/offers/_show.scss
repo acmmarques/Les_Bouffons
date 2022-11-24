@@ -9,7 +9,7 @@
 
 .avatar_profile {
   position: absolute;
-  top: 320px;
+  top: 290px;
   left: 80px;
 }
 
@@ -17,11 +17,6 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-}
-
-#content_profile {
-  margin-top: 120px;
-  margin-bottom: 45px;
 }
 
 #features_button {
@@ -38,22 +33,22 @@
   margin-top: 10px;
 }
 
-#info-booking-container {
-  padding: 1rem;
-}
-
-.card-category-info {
+.info-container {
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 )
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 );
+  padding: 10px;
+  margin-top: 120px;
+  margin-bottom: 45px;
 }
 
-.card-category-booking {
-  pading: 1rem;
+.booking-form-container {
+  padding: 1rem;
   height: 300px;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 )
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2 );
+  margin: 120px 0px 45px 30px;
 }
 
 .booking-container {
@@ -64,6 +59,25 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+.party-card {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.party-cards {
+  margin: 0px 0px 50px 0;
 }
 
 // Smallest device
@@ -99,23 +113,4 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
-
-.card-category {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.cards {
-  margin: 0px 0px 50px 0;
 }
