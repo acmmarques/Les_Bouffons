@@ -13,7 +13,9 @@
   <body class="background bg-light">
     <%= render 'shared/navbar' %>
     <%= render "shared/flashes" %>
+    <main id="main-content">
     <%= yield %>
+    </main>
     <%= render 'shared/footer' %>
 
   </body>
