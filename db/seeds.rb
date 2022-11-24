@@ -48,7 +48,7 @@ i = 0
   clown = Offer.new(
     name: names[i],
     features: tricks.sample + " " + tricks.sample + " " + tricks.sample,
-    details: "is " + Faker::Emotion.adjective + " speak " + Faker::Nation.language + "." + "  Favorite's citation: " + Faker::ChuckNorris.fact,
+    details: "is " + Faker::Emotion.adjective + " and speaks " + Faker::Nation.language + "." + "Favorite quote: " + Faker::ChuckNorris.fact,
     price: rand(50..150)
   )
   for image in clown_images[i]
