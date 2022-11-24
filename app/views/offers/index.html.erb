@@ -1,10 +1,8 @@
-
-<div class="cards row row.cols-1 row-cols-md-3 g-4 m-3 bg-light">
-  <div class="col col-sm-10 col-md-6 col-lg-10">
-    <h1 class="h1">These happy clowns are at your service! </h1>
-  </div>
-  <% @clowns.each do |clown| %>
+<h1 class="h1 m-3">These happy clowns are at your service! </h1>
+<div class="container-fluid">
+  <div class="row m-3 bg-light">
+    <% @clowns.each do |clown| %>
       <%= render "card", clown: clown %>
-  <% end %>
-
+    <% end %>
+  </div>
 </div>
