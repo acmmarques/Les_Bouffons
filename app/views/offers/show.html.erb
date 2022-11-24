@@ -4,7 +4,7 @@
   </div>
   <div class="overall-container d-flex col-9" style="max-width: 1350px; margin: 0 auto;">
     <div class="detail-container" style="min-width: 500px;">
-      <div class="info-container" id="content_profile">
+      <div class="info-container fs-2" id="content_profile">
         <div class="name-location-container">
           <h1 class="show-title" style="font-family: Nerko One, cursive"><%= @clown.name %></h1>
         </div>
@@ -13,7 +13,7 @@
         </div>
         <div>
           <% @clown.features.split.each do |feature|  %>
-            <button type="button" class="btn btn-info nobutton mb-3" id="features_button"><%= feature.capitalize %></button>
+            <button type="button" class="btn btn-info nobutton mb-3 fs-4" id="features_button"><%= feature.capitalize %></button>
           <% end %>
         </div>
       </div>
@@ -29,8 +29,8 @@
       </div>
     </div>
     <div class="booking-form-container col-3" style="min-width: 300px;">
-      <h5 class="mb-3 booking-form-title" style="font-family: Nerko One, cursive">Book this clown!</h5>
-      <h6 class="mb-3"><strong><%= @clown.price %>€ per day </strong></h6>
+      <h5 class="mb-3 booking-form-title fs-2 text-center" style="font-family: Nerko One, cursive">Book this clown!</h5>
+      <h6 class="mb-3 fs-2 text-center"><strong><%= @clown.price %>€ per day </strong></h6>
       <div class="container my-3" style="max-read 500px;">
         <form class="simple_form new_booking" id="new_booking" novalidate="novalidate" action="#" accept-charset="UTF-8" method="post"></form>
           <input type="hidden" name="authenticity_token" value="aceP967tPQ/mF6N1d5PZFTbLZcUI/rbfKC3sxL+mUnRhcUrD+DRaTwDWDntI6K85GrMeg7YolG852hNSCYZfZQ==">
@@ -45,7 +45,7 @@
             </label>
             <input class="form-control numeric integer optional" type="number" step="1" name="booking[duration]" id="booking_duration">
           </div>
-          <input type="submit" name="commit" value="Book this clown" class="btn btn-info booking-form-button mb-5" data-disable-with="Request Booking">
+          <input type="submit" name="commit" value="Book this clown" class="btn btn-info booking-form-button fs-3 text-center" data-disable-with="Request Booking">
       </div>
     </div>
   </div>
