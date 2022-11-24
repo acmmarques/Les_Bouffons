@@ -1,4 +1,5 @@
 class OffersController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_clown, only: %i[ show edit update destroy ]
 
   def index
@@ -14,6 +15,7 @@ class OffersController < ApplicationController
 
   def create
     @clown = Offer.new(clown_params)
+    @clown.user = current_user
     if @clown.save
       redirect_to offers_path
     else
