@@ -1,75 +1,52 @@
 <div class="page" style="min-height:75vh;">
-  <div class="banner_profile"></div>
-
-
-  <div class="overall-container" style="max-width: 1350px; margin: 0 auto;">
+  <div class="banner_profile">
     <%= cl_image_tag @clown.photos.first.key, :width=>800, :height=>800, :crop=>"crop", :gravity=>"face", class: "avatar-xl avatar_profile"%>
-      <div class="container" id="content_profile">
-      <div class="row justify-content-between" id="info-booking-container">
-        <div class="col-12 col-lg-6 card-category-info">
-
-
-          <div class="name-location-container">
-            <h1 style="font-family: Nerko One, cursive"><%= @clown.name %></h1>
-            <p>location of clown (to-do)</p>
+  </div>
+  <div class="overall-container col-9" style="max-width: 1350px; margin: 0 auto;">
+    <div class="detail-container" style="min-width: 500px;">
+      <div class="info-container" id="content_profile">
+        <div class="name-location-container">
+          <h1 style="font-family: Nerko One, cursive"><%= @clown.name %></h1>
+        </div>
+        <div>
+          <p><%= @clown.details %></p>
+        </div>
+        <div>
+          <% @clown.features.split.each do |feature|  %>
+            <button type="button" class="btn btn-info nobutton mb-3" id="features_button"><%= feature.capitalize %></button>
+          <% end %>
+        </div>
+      </div>
+      <div class="images-container">
+        <div class="cards party-cards w-100">
+          <div class="card-category party-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @clown.photos.second.key, :width=>2000, :height=>2000, :gravity=>"faces", :crop=>"fill"%>)">
           </div>
-          <div>
-            <p><%= @clown.details %></p>
+          <div class="card-category party-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @clown.photos.third.key, :width=>2000, :height=>2000, :gravity=>"faces", :crop=>"fill"%>)">
           </div>
-          <div >
-            <% @clown.features.split.each do |feature|  %>
-            <button type="button" class="btn btn-info nobutton" id="features_button"><%= feature.capitalize %></button>
-            <% end %>
+          <div class="card-category party-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @clown.photos.fourth.key, :width=>2000, :height=>2000, :gravity=>"faces", :crop=>"fill"%>)">
           </div>
         </div>
-
-        <div class="col-12 col-lg-4 card-category-booking">
-          <div class="booking-container">
-            <h5 class="mb-3">Book this clown!</h5>
-            <h6 class="mb-3"><%= @clown.price %>€ per day </h6>
-            <div class="container my-3" style="max-read 500px;">
-                  <form class="simple_form new_booking" id="new_booking" novalidate="novalidate" action="#" accept-charset="UTF-8" method="post"></form>
-                    <input type="hidden" name="authenticity_token" value="aceP967tPQ/mF6N1d5PZFTbLZcUI/rbfKC3sxL+mUnRhcUrD+DRaTwDWDntI6K85GrMeg7YolG852hNSCYZfZQ==">
-                    <div class="form-group date optional booking_day">
-                      <label class="date optional" for="booking_day">Day</label>
-                      <div class="d-flex flex-row justify-content-between align-items-center">
-                        <input class="form-control mx-1 date optional" type="date" name="booking[day]" id="booking_day">
-                      </div>
-                    </div>
-                    <div class="form-group integer optional booking_duration">
-                      <label class="integer optional" for="booking_duration">How many days?
-                      </label>
-                      <input class="form-control numeric integer optional" type="number" step="1" name="booking[duration]" id="booking_duration">
-                    </div>
-                    <input type="submit" name="commit" value="Book this clown" class="btn btn-info" data-disable-with="Request Booking">
+      </div>
+    </div>
+    <div class="booking-form-container col-3" style="min-width: 300px;">
+      <h5 class="mb-3">Book this clown!</h5>
+      <h6 class="mb-3"><%= @clown.price %>€ per day </h6>
+      <div class="container my-3" style="max-read 500px;">
+        <form class="simple_form new_booking" id="new_booking" novalidate="novalidate" action="#" accept-charset="UTF-8" method="post"></form>
+          <input type="hidden" name="authenticity_token" value="aceP967tPQ/mF6N1d5PZFTbLZcUI/rbfKC3sxL+mUnRhcUrD+DRaTwDWDntI6K85GrMeg7YolG852hNSCYZfZQ==">
+          <div class="form-group date optional booking_day">
+            <label class="date optional" for="booking_day">Day</label>
+            <div class="d-flex flex-row justify-content-between align-items-center">
+              <input class="form-control mx-1 date optional" type="date" name="booking[day]" id="booking_day">
             </div>
           </div>
-
-        </div>
+          <div class="form-group integer optional booking_duration">
+            <label class="integer optional" for="booking_duration">How many days?
+            </label>
+            <input class="form-control numeric integer optional" type="number" step="1" name="booking[duration]" id="booking_duration">
+          </div>
+          <input type="submit" name="commit" value="Book this clown" class="btn btn-info" data-disable-with="Request Booking">
       </div>
     </div>
-    <div class="container">
-      <div class="cards">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @clown.photos.second.key, :width=>2000, :height=>2000, :gravity=>"faces", :crop=>"fill"%>)">
-          Party 1
-        </div>
-
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @clown.photos.third.key, :width=>2000, :height=>2000, :gravity=>"faces", :crop=>"fill"%>)">
-          Party 2
-        </div>
-
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @clown.photos.fourth.key, :width=>2000, :height=>2000, :gravity=>"faces", :crop=>"fill"%>)">
-          Party 3
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-
   </div>
-
-
 </div>
