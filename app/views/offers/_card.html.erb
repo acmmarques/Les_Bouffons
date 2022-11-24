@@ -1,0 +1,17 @@
+  <div class="col col-sm-10 col-md-6 col-lg-10">
+  <div class="card card-main mb-3" style="max-width: 540px; background:<%= %w(var(--bs-red) var(--bs-yellow) var(--bs-orange) var(--bs-purple)).sample %>">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <%= cl_image_tag clown.photos.first.key, class: "index-photos"%>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title shadowed-text"><strong><%= clown.name %></strong></h5>
+          <p class="card-text shadowed-text"><%= clown.details %></p>
+          <%= link_to "+ Info", clown, class: "card-link" %>
+          <p class="card-price shadowed-text"><strong><%= clown.price %>€</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

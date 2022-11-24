@@ -1,0 +1,17 @@
+<%= link_to clown do %>
+<div class="col col-sm-10 col-md-6 col-lg-10">
+  <div class="card card-main mb-3" style="max-width: 540px; background: white">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <%= cl_image_tag clown.photos.first.key, class: "index-photos"%>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title shadowed-text"><strong><%= clown.name %></strong></h5>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<% end %>
