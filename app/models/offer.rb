@@ -4,4 +4,9 @@ class Offer < ApplicationRecord
   has_many :reviews
   has_many_attached :photos
   belongs_to :user
+
+  validates :details, presence: true
+  validates :features, presence: true
+  validates :name, presence: true, uniqueness: true
+  validates :price, presence: true
 end
