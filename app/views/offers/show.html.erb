@@ -1,12 +1,12 @@
 <div class="page" style="min-height:75vh;">
   <div class="banner_profile">
-<<<<<<< HEAD
     <div class="overall-container d-flex col-9" style="max-width: 1350px; margin: 0 auto;">
       <div class="detail-container" style="min-width: 500px;">
         <div class="info-container fs-2" id="content_profile">
           <div class="name-location-container">
             <h1 class="show-title" style="font-family: Nerko One, cursive"><%= @clown.name %></h1>
-                 <%= cl_image_tag @clown.photos.first.key, class: "avatar-show"%>
+
+                 <%= cl_image_tag @clown.photos.first.key, class: "avatar-show" if @clown.photos.attached? %>
           </div>
           <div>
             <p><%= @clown.details %></p>
@@ -15,32 +15,6 @@
             <% @clown.features.split.each do |feature|  %>
               <button type="button" class="btn btn-info nobutton mb-3 fs-4" id="features_button"><%= feature.capitalize %></button>
             <% end %>
-=======
-    <%= cloudinary_image_first(@clown)%>
-  </div>
-  <div class="overall-container d-flex col-9" style="max-width: 1350px; margin: 0 auto;">
-    <div class="detail-container" style="min-width: 500px;">
-      <div class="info-container fs-2" id="content_profile">
-        <div class="name-location-container">
-          <h1 class="show-title" style="font-family: Nerko One, cursive"><%= @clown.name %></h1>
-        </div>
-        <div>
-          <p><%= @clown.details %></p>
-        </div>
-        <div>
-          <% @clown.features.split.each do |feature|  %>
-            <button type="button" class="btn btn-info nobutton mb-3 fs-4" id="features_button"><%= feature.capitalize %></button>
-          <% end %>
-        </div>
-      </div>
-      <div class="images-container">
-        <div class="cards party-cards w-100">
-          <div class="card-category party-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cloudinary_image_second(@clown) %>)">
-          </div>
-          <div class="card-category party-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cloudinary_image_third(@clown) %>)">
-          </div>
-          <div class="card-category party-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cloudinary_image_fourth(@clown) %>)">
->>>>>>> 57fd1e60138d087e9974e79c8403b22fe5486134
           </div>
         </div>
         <div class="images-container">
