@@ -1,0 +1,15 @@
+ <div style="padding: 15px;"></div>
+ <%= simple_form_for [@clown, @booking], data: { turbo: false} do |f| %>
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <%= f.input :start_time, class:"form-control mx-1 date optional", type:"date", id:"start_day"%>
+              </div>
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <%= f.input :end_time, class:"form-control mx-1 date optional", type:"date", id:"end_day"%>
+              </div>
+              <div class="form-group integer optional booking_duration">
+                  <%= f.input :location, class:"form-control optional", type:"text", name:"location", id:"location" %>
+              </div>
+              <div class="ffff">
+                <%= f.submit "Create booking", class:"btn btn-info booking-form-button fs-3 text-center" %>
+              </div>
+          <% end %>

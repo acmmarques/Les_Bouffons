@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[ create ]
 
   def index
     @bookings = Booking.where(user: current_user)
@@ -17,14 +16,15 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @clown = Offer.find(params[:offer_id])
     @booking = Booking.new(booking_params)
-    @booking.offer = @booking
+    @booking.offer = @clown
     @booking.user = current_user
 
     if @booking.save
       redirect_to bookings_path
     else
-      render :new, status: :unprocessable_entity
+      render "offers/show", status: :unprocessable_entity
     end
   end
 
@@ -36,9 +36,6 @@ class BookingsController < ApplicationController
 
   private
 
-  def set_booking
-    @booking = Booking.find(params[:id])
-  end
 
   def booking_params
     params.require(:booking).permit(:start_time, :end_time, :location)
