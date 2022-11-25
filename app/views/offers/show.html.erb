@@ -9,7 +9,7 @@
                  <%= cl_image_tag @clown.photos.first.key, class: "avatar-show" if @clown.photos.attached? %>
           </div>
           <div>
-            <p><%= @clown.details %></p>
+            <p><%= @clown.details.gsub(".", ".<br>").html_safe %></p>
           </div>
           <div>
             <% @clown.features.split.each do |feature|  %>
