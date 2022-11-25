@@ -1,0 +1,56 @@
+<div class="overall-bookings-container">
+  <div class="bookings-up-container">
+  <div class="user-info-container">
+  <h5><%= current_user.email %></h5>
+  <p>User details: In fermentum justo eu dictum vehicula.
+   Nulla cursus purus in leo pretium sodales. Morbi
+   viverra vehicula sagittis. Suspendisse eget ante et
+    sapien lobortis aliquam. Ut et eros leo. Pellentesque
+    vehicula diam nec pellentesque posuere. Vestibulum
+    rutrum, quam in dapibus sodales, justo tellus
+    efficitur mi, ut bibendum sapien lectus
+    commodo est. </p>
+  </div>
+  <div class="bookings-user-avatar">
+    <%= image_tag("Le Wagon 096-XL.jpg") %>
+  </div>
+  </div>
+
+  <div class="bookings-down-container">
+    <div class="bookings-title-container">
+    <h5> Your bookings </h5>
+    </div>
+    <div class="bookings-cards-container">
+    <% @bookings.each do |booking|  %>
+      <div class="bookings-card-container">
+        <div class="clown-info">
+          <div id="you-booked">
+            <h5>You booked <%= booking.offer.name %> clown avatar - <%= cl_image_tag booking.offer.photos[0].key, class: "profile-avatar" %> </h5>
+          </div>
+          <div id="from-date-to-date">
+            <p>From <%= booking.start_time %> to <%= booking.end_time %></p>
+          </div>
+
+          <div id="clown-details">
+
+            <%= booking.offer.details %>
+              <p> </p>
+            <% booking.offer.features.split.each do |feature| %>
+            <div id="each-btn">
+            <%= feature.capitalize %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+        <div style="background-color: lightgrey;box-shadow: 0 0 15px rgb(0 0 0 / 20%);width: 50%;min-height: 250px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+
+
+</div>

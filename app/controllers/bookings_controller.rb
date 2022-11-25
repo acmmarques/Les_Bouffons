@@ -2,7 +2,14 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: %i[ create ]
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
+
+    @markers = @bookings.geocoded.map do |booking|
+      {
+        lat: booking.latitude,
+        lng: booking.longitude
+      }
+    end
   end
 
   def new
@@ -25,6 +32,7 @@ class BookingsController < ApplicationController
     @booking.destroy
     redirect_to bookings_path
   end
+
 
   private
 
