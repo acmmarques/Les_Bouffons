@@ -11,7 +11,8 @@
   margin: 10px;
   padding: 10px;
   display: flex;
-  width: 100%;
+  width: 99%;
+  align-self: center;
   justify-content: space-between;
 }
 
@@ -37,7 +38,7 @@
   background-color: lightgrey;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 50%;
-  height: 250px;
+  min-height: 250px;
 }
 
 .clown-info {
@@ -69,4 +70,18 @@
       height: 125%;
       object-fit: cover;
     }
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#each_btn {
+  background-color: lightgoldenrodyellow;
+  border-radius: 30%;
+  width: 50px;
+  height: 25px;
+  margin: 10px;
 }

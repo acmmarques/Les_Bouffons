@@ -18,34 +18,37 @@
 
   <div class="bookings-down-container">
     <div class="bookings-title-container">
-    <h5> Your bookings</h5>
+    <h5> Your bookings </h5>
     </div>
     <div class="bookings-cards-container">
+    <% @bookings.each do |booking|  %>
       <div class="bookings-card-container">
         <div class="clown-info">
           <div id="you-booked">
-            <h5>You booked #clown_name clown avatar </h5>
+            <h5>You booked <%= booking.offer.name %> clown avatar - <%= cl_image_tag booking.offer.photos[0].key, class: "profile-avatar" %> </h5>
           </div>
           <div id="from-date-to-date">
-            <p>From #start_date to #end_date</p>
+            <p>From <%= booking.start_time %> to <%= booking.end_time %></p>
           </div>
 
           <div id="clown-details">
-            <p>Clown details: Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Etiam ut dolor a elit
-            imperdiet pulvinar et nec enim. Mauris sollicitudin
-            mauris massa, a sagittis augue faucibus eget.
-            Proin vitae ex et sapien rutrum iaculis ut quis mi.
-            </p>
+
+            <%= booking.offer.details %>
+              <p> </p>
+            <% booking.offer.features.split.each do |feature| %>
+            <div id="each-btn">
+            <%= feature.capitalize %>
+            </div>
+            <% end %>
           </div>
         </div>
-        <div class="map-container">
-        <h5>This is were the map should be</h5>
+        <div style="background-color: lightgrey;box-shadow: 0 0 15px rgb(0 0 0 / 20%);width: 50%;min-height: 250px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
-      <div class="bookings-card-container">
-        card 2
-      </div>
+    <% end %>
     </div>
   </div>
 
