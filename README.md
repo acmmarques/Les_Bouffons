@@ -1,1 +1,2 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+This app was build in Rails by Ana Sousa, André Marques, Loic Thieffry and Manuel Kneib in week 7 of the Le Wagon Web Development Bootcamp in Lisbon (Batch 1041). During week 7 of the bootcamp all teams build a marketplace web-app before starting their final projects in week 8 and 9. Our team decided to build a marketplace for clowns.
+This app was build using the [lewagon/rails-templates](https://github.com/lewagon/rails-templates).
